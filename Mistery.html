@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+<style>
+body {
+background-image: url("background.png");
+background-repeat: no-repeat;
+background-position: 50%% 0%;
+background-size: 100% 1000px;
+}       
+
+
+ul {
+    border-width:1px solid #bbb;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    overflow: hidden;
+    font-family: Caveat , sans-serif;
+}
+li{
+    display:inline;
+    
+}
+.ab a:hover {
+  background-color: #ebe534;
+  transition: 1s;
+  opacity: 0.6;
+  border-radius: 10px;
+}
+.ab a {
+    display:inline-block;
+    padding:10px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 30px;
+}
+div.absolute {
+
+position: absolute;
+top: 0%;
+left: 0%;
+}
+
+.dropbt {
+
+color: black;
+display: inline-block;
+text-align: center;
+text-decoration: none;
+padding: 14px 16px;
+font-size: 30px;
+}
+
+
+.dropdown:hover .dropbt{
+
+    background-color: #ebe534;
+  transition: 1s;
+  opacity: 0.6;
+  border-radius: 10px;
+}
+
+.dropdown {
+
+    display: inline-block;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.dropdown-content {
+
+background-color: black;
+display: none;
+position: absolute;
+min-width: 110px;
+z-index: 1;
+animation-name: fadein;
+animation-duration:4s;
+border-radius:  10px;
+}
+
+.dropdown-content a {
+    color: yellow ;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 23px;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+#slogan {
+    animation: fadein 2s;
+    font-family: "dancing script", serif;
+    position: absolute;
+    left: 38%;
+    top: 20%;
+    text-decoration-color: ;
+    background-image: linear-gradient(to right, #FFDD00 , #FBB034);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+#fantoma
+{
+position: absolute;
+left: 10px;
+top: 600px;
+animation-name:fadein , move;
+animation-duration: 4s;
+animation-fill-mode: forwards;
+}
+            
+@keyframes move {
+
+  0%   { left:10px; top:600px;}
+  100% {left:10px; top:430px;}
+}
+
+#bun {
+position: absolute;
+top: 620px;
+left: 140px;
+animation-name: fadein;
+animation-duration: 6s;
+font-family: caveat , sans-serif;
+color: white;
+}
+#footer {
+
+    height: 192.4px;
+    position: absolute;
+    bottom: -20vh;
+    left: 0;
+    background-color: #b5af0d;
+    width: 100%;
+
+}
+
+#meniu a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+
+
+
+}
+#meniu li {
+    display: block;
+}
+
+#meniu {
+
+        position: absolute;
+        left: 45%;
+        bottom: 20px;
+
+}
+#meniurapid {
+
+    font-size: 40px;
+    font-family: caveat;
+    color: black;
+    position: absolute;
+    left: 44.5%;
+    bottom: 110px;
+
+}
+.form {
+
+    position: absolute;
+    bottom: 110px
+
+
+}
+input[type=email] {
+ width: 300px;
+ padding: 10px 10px;
+ border: 2px solid black;
+ border-radius: 5px;
+ position: absolute;
+ left: 14%;
+ top: 65px;
+}
+
+input[type=submit]{
+    position: absolute;
+    left: 19%;
+    top: 130px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: #660000;
+    color: white;
+
+
+}
+#Newsletter {
+
+    position: absolute;
+    left: 14%;
+    top: 5px;
+}
+#contact {
+
+    position: absolute;
+    right: 390px;
+    bottom: 110px;
+    font-family: caveat, sans-serif;
+    font-size: 40px;
+
+}
+</style>
+</head>
+<body>
+<h1 id="slogan"> O noapte la noi, un mister pentru voi </h1>
+<h1 id="bun">Bun venit!!</h1>
+<ul>
+  <li class="ab"><a href="/">Home</a></li>
+  <li class="ab"><a href="Cazare.html">Cazare</a></li>
+  <li class="dropdown">
+  <a href="/contact/" class="dropbt">Contact</a>
+    <div class="dropdown-content">    
+    <a href="https://www.instagram.com/hotelmistery15/">Instagram</a>
+    <a href="#">Facebook</a>
+
+</div>
+</li>
+  <li class="ab"><a href="#">Despre</a></li>
+  <li class="ab"><a href="/merch/">Evenimente</a></li>
+</ul>
+<div class="absolute">
+<img src="logo.png"></img>
+<img id="fantoma" src="fantoma.png"></img>
+</div>
+<footer id="footer">
+<h1 id="meniurapid">Meniu rapid</h1>
+<ul id="meniu">
+<li><a href="Cazare.html">Cazare</a></li>
+<li><a href="#">Despre</a></li>
+<li><a href="#">Evenimente</a></li>
+</ul>
+<form action="#">
+  <input type="email" id="email" name="email" placeholder="Email-ul dumneavoastra">
+  <input type="submit" value="Aboneaza-te">
+</form>
+<hr color="black" style="width:17.1%;position: absolute; left: 14%; top: 50px;">
+<h1 id="Newsletter">Newsletter</h1>
+<h1 id="contact">Contact</h1>
+<p style="position: absolute; right: 250px; top: 30px;font-size: 20px;t">&#128204 Strada Ion Mihalache Nr 36 Jud. Bihor Oradea</p>
+<p style="position:absolute; right: 495px; top: 60px; font-size: 20px;">&#128222 +40 766251285</p>
+<p style="position:absolute; right:422px; top: 92px;font-size: 20px;">&#9993 hotelmistery@gmail.com</p>
+</footer>
+</body>
+</html>
